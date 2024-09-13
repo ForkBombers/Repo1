@@ -45,7 +45,8 @@ jobs:
 
       - name: Run autopep8
         run: |
-          autopep8 --in-place --recursive .
+          autopep8 --in-place --recursive . > HW2/autopep8_trace.txt
+          cat HW2/autopep8_trace.txt
 
       - name: Run pylint
         run: |
