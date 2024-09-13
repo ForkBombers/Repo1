@@ -49,13 +49,13 @@ jobs:
 
       - name: Run pylint
         run: |
-          pylint hw2_debugging.py > pylint_trace.txt
-          cat pylint_trace.txt
+          pylint HW2/hw2_debugging.py > HW2/pylint_trace.txt
+          cat HW2/pylint_trace.txt
 
       - name: Run pyflakes
         run: |
-          pyflakes hw2_debugging.py > pyflakes_trace.txt
-          cat pyflakes_trace.txt    
+          pyflakes HW2/hw2_debugging.py > HW2/pyflakes_trace.txt
+          cat HW2/pyflakes_trace.txt    
           
       - name: Test with pytest
         run: |
