@@ -37,9 +37,25 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+          
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install autopep8 pylint pyflakes pytest pytest-cov
+
+      - name: Run autopep8
+        run: |
+          autopep8 --in-place --recursive .
+
+      - name: Run pylint
+        run: |
+          pylint rand.py hw2_debugging.py > pylint_output.txt
+          cat pylint_output.txt
+
+      - name: Run pyflakes
+        run: |
+          pyflakes rand.py hw2_debugging.py > pyflakes_output.txt
+          cat pyflakes_output.txt    
           
       - name: Test with pytest
         run: |
