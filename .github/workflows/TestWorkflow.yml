@@ -44,4 +44,4 @@ jobs:
       - name: Test with pytest
         run: |
           pip install pytest pytest-cov
-          pytest test_cases.py
+          pytest HW2/test_cases.py
