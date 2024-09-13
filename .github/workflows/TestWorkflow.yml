@@ -49,12 +49,12 @@ jobs:
 
       - name: Run pylint
         run: |
-          pylint rand.py hw2_debugging.py > pylint_output.txt
+          pylint hw2_debugging.py > pylint_output.txt
           cat pylint_output.txt
 
       - name: Run pyflakes
         run: |
-          pyflakes rand.py hw2_debugging.py > pyflakes_output.txt
+          pyflakes hw2_debugging.py > pyflakes_output.txt
           cat pyflakes_output.txt    
           
       - name: Test with pytest
